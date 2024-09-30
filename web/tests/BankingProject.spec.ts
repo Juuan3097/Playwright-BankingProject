@@ -7,5 +7,6 @@ test.describe("@Web BankingProject", () => {
     const poManager = new POManager(page);
     const bankManager = await poManager.getBankManager();
     await bankManager.goToBankManager();
+    console.log("test");
   });
 });

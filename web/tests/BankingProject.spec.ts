@@ -9,7 +9,7 @@ test.describe("@Web BankingProject", () => {
     await bankManager.addNewCustomer();
   });
 
-  test("@Web Crear Cuenta", async ({ page }) => {
+  test.only("@Web Crear Cuenta", async ({ page }) => {
     await page.goto(process.env.URL!);
     const poManager = new POManager(page);
     const bankManager = await poManager.getBankManager();
@@ -34,11 +34,21 @@ test.describe("@Web BankingProject", () => {
     expect(firstName === process.env.FIRST_NAME!).toBeFalsy();
   });
 
-  test("@Web Customer Login", async ({ page }) => {
+  test("@Web Realizar deposito en la cuenta", async ({ page }) => {
     await page.goto(process.env.URL!);
     const poManager = new POManager(page);
     const customer = await poManager.getCustomer();
+    const depositAmount = process.env.DEPOSIT_AMOUNT;
     await customer.login();
-    await customer.deposit();
+    await customer.deposit(parseInt(depositAmount!));
+  });
+
+  test("@Web Realizar retiro que exceda el balance", async ({ page }) => {
+    await page.goto(process.env.URL!);
+    const poManager = new POManager(page);
+    const customer = await poManager.getCustomer();
+    const withdrawalAmount = process.env.WITHDRAWAL_AMOUNT;
+    await customer.login();
+    await customer.withdraw(parseInt(withdrawalAmount!));
   });
 });

@@ -80,7 +80,7 @@ test.describe("@Web BankingProject", () => {
     const limit = parseInt(process.env.LIMIT_PERCENTAGE!);
     await dynamicTable.getTableValue(limit);
   });
-  test.only("@Web Drag & Drop Medium ", async ({ page }) => {
+  test("@Web Drag & Drop Medium ", async ({ page }) => {
     await page.goto(process.env.NEAR_FORM_URL!);
     const poManager = new POManager(page);
     const dragNDropMedium = await poManager.getDragNDropMedium();
@@ -88,5 +88,11 @@ test.describe("@Web BankingProject", () => {
     await dragNDropMedium.goToDNDMenu();
     await dragNDropMedium.dragAndDrop(actionTimes);
   });
-  //  test("@Web tes ", async ({ page }) => {});
+  test("@Web Drag & Drop Hard ", async ({ page }) => {
+    await page.goto(process.env.NEAR_FORM_URL!);
+    const poManager = new POManager(page);
+    const dragNDropHard = await poManager.getDragNDropHard();
+    await dragNDropHard.goToDNDMenu();
+    await dragNDropHard.dragNDrop();
+  });
 });

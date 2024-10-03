@@ -12,6 +12,7 @@ import { Download } from "./DownloadPage";
 import { Slider } from "./SliderPage";
 import { DynamicTable } from "./DynamicTablePage";
 import { DragNDropMedium } from "./Drag&DropMediumPage";
+import { DragNDropHard } from "./Drag&DropHardPage";
 
 export class POManager {
   page: Page;
@@ -28,6 +29,7 @@ export class POManager {
   slider: Slider;
   dynamicTable: DynamicTable;
   dragNDropMedium: DragNDropMedium;
+  dragNDropHard: DragNDropHard;
 
   constructor(page: Page) {
     this.page = page;
@@ -44,6 +46,7 @@ export class POManager {
     this.slider = new Slider(this.page);
     this.dynamicTable = new DynamicTable(this.page);
     this.dragNDropMedium = new DragNDropMedium(this.page);
+    this.dragNDropHard = new DragNDropHard(this.page);
   }
 
   async getBankManager() {
@@ -96,5 +99,9 @@ export class POManager {
 
   async getDragNDropMedium() {
     return this.dragNDropMedium;
+  }
+
+  async getDragNDropHard() {
+    return this.dragNDropHard;
   }
 }

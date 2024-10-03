@@ -24,7 +24,6 @@ export class RadioButton {
   }
 
   async checkRadioBtn() {
-    console.log("Locators encontrados: " + (await this.redBtn));
     await this.redBtn.check();
     await this.groupTwo.waitFor({ state: "visible" });
     await this.groupTwo.check();

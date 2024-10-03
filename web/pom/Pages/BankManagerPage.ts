@@ -47,8 +47,6 @@ export class BankManager {
     const customerFirstName = await this.lastRow.first().textContent();
     const customerLastName = await this.lastRow.nth(1).textContent();
     const fullname = customerFirstName + " " + customerLastName;
-    console.log("El nombre es: " + customerFirstName);
-    console.log("El apellido es: " + customerLastName);
     return { fullname };
   }
 
@@ -76,16 +74,14 @@ export class BankManager {
     await this.customerSelector.selectOption({
       label: `${fullName}`,
     });
-    console.log(`${fullName}`);
     await this.currencySelector.selectOption({ value: "Rupee" });
     await this.subtmitBtn.click();
   }
 
   async validateAccountNumber() {
     await this.customersMenu.click();
-    const AccountNumberColumn = this.lastRow.nth(3).locator("span");
-    expect(await AccountNumberColumn).toBeVisible();
-    console.log(await AccountNumberColumn.textContent());
+    const accountNumberColumn = await this.lastRow.nth(3).locator("span");
+    expect(await accountNumberColumn).toBeVisible();
   }
 
   async fillFirstNameInput() {
@@ -95,7 +91,6 @@ export class BankManager {
     await this.subtmitBtn.click();
     await this.customersMenu.click();
     const customersFirstName = await this.lastRow.first().textContent();
-    console.log("El nombre es: " + customersFirstName);
     return { customersFirstName };
   }
 }

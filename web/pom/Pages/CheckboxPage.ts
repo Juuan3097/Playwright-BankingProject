@@ -35,7 +35,6 @@ export class Checkbox {
     );
     for (let i = 0; i < (await this.checkboxIcons.count()); i++) {
       const checkIconState = await this.checkboxIcons.nth(i).isChecked();
-      console.log("resultado es: " + checkIconState);
       if (checkIconState === false) {
         await this.checkboxIcons.nth(i).click();
       }

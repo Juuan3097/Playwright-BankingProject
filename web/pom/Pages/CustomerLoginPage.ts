@@ -6,10 +6,13 @@ export class Customer {
   userSelect: Locator;
   loginBtn: Locator;
   welcomeMsg: Locator;
-  depositBtn: Locator;
+  depositMenu: Locator;
   amountInput: Locator;
   submitBtn: Locator;
   confirmationMsg: Locator;
+  withdrawMenu: Locator;
+  withdrawalInput: Locator;
+  errorMsg: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -17,10 +20,15 @@ export class Customer {
     this.userSelect = page.locator("#userSelect");
     this.loginBtn = page.locator("button[type='submit']");
     this.welcomeMsg = page.getByText(" Welcome ");
-    this.depositBtn = page.getByRole("button", { name: "Deposit" });
+    this.depositMenu = page.getByRole("button", { name: "Deposit" });
     this.amountInput = page.getByPlaceholder("amount");
     this.submitBtn = page.locator("button[type='submit']");
     this.confirmationMsg = page.getByText("Deposit Successful");
+    this.withdrawMenu = page.getByRole("button", { name: "Withdrawl " });
+    this.withdrawalInput = page.getByPlaceholder("amount");
+    this.errorMsg = page.getByText(
+      "Transaction Failed. You can not withdraw amount more than the balance."
+    );
   }
 
   async login() {
@@ -30,10 +38,17 @@ export class Customer {
     await this.welcomeMsg.waitFor({ state: "visible" });
   }
 
-  async deposit() {
-    await this.depositBtn.click();
-    await this.amountInput.fill("1500");
+  async deposit(depositAmount: number) {
+    await this.depositMenu.click();
+    await this.amountInput.fill(depositAmount.toString());
     await this.submitBtn.click();
     expect(await this.confirmationMsg).toBeVisible();
+  }
+
+  async withdraw(withdrawalAmount: number) {
+    await this.withdrawMenu.click();
+    await this.withdrawalInput.fill(withdrawalAmount.toString());
+    await this.submitBtn.click();
+    expect(await this.errorMsg).toBeVisible();
   }
 }

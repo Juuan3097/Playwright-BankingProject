@@ -23,8 +23,5 @@ export class UploadFile {
     await this.uploadFileIcon.setInputFiles("/Users/jrios/Downloads/file.txt");
     await this.updloadBtn.click();
     expect(await this.alertMsg).toBeVisible();
-    // const fileChooserPromise = await this.page.waitForEvent("filechooser");
-    // const fileChooser = await fileChooserPromise;
-    // await fileChooser.setFiles(path.join("/Users/jrios/Downloads/file.txt"));
   }
 }

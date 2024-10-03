@@ -19,8 +19,7 @@ export class Alert {
 
   async handleAlert() {
     await this.errorBtn.click();
-    //    await this.errorAlert.waitFor({ state: "visible" });
     await this.page.on("dialog", (dialog) => dialog.dismiss());
-    await this.page.waitForTimeout(5000);
+    console.log("Alert handled");
   }
 }

@@ -23,7 +23,7 @@ export class Inputs {
     await this.dateInput.focus();
     await this.dateInput.pressSequentially("08301997");
     //  const value = await this.dateOutput.getAttribute("value");
-    //   await expect(await value).toEqual("1997-08-30");
+    //  await expect(await value).toEqual("1997-08-30");
     await this.textArea.first().fill("lorem ipsum");
     await this.page.pause();
   }

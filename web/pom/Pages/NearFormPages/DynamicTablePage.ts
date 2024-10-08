@@ -18,7 +18,6 @@ export class DynamicTable {
   }
 
   async getTableValue(limit: number) {
-    await this.page.pause();
     let condition: boolean = false;
     for (let i = 0; i < (await this.row.count()); i++) {
       const name = await this.row.nth(i).locator("td").nth(0).textContent();

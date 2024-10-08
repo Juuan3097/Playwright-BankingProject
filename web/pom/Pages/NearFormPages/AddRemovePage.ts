@@ -25,7 +25,6 @@ export class AddRemove {
     );
 
     for (let i = await this.removeElement.count(); i > 0; i--) {
-      await this.page.pause();
       await this.removeElement
         .nth(i - 1)
         .locator("button")

@@ -27,6 +27,5 @@ export class RadioButton {
     await this.redBtn.check();
     await this.groupTwo.waitFor({ state: "visible" });
     await this.groupTwo.check();
-    await this.page.pause();
   }
 }

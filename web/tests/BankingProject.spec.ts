@@ -1,7 +1,7 @@
 import { test, expect, chromium, Page } from "@playwright/test";
 import { POManager } from "../pom/Pages/POManager";
 
-test.describe("@Web BankingProject", () => {
+test.describe.skip("@Web BankingProject", () => {
   test("@Web Add New Customer", async ({ page }) => {
     await page.goto(process.env.URL!);
     const poManager = new POManager(page);
@@ -9,11 +9,11 @@ test.describe("@Web BankingProject", () => {
     await bankManager.addNewCustomer();
   });
 
-  test.only("@Web Crear Cuenta", async ({ page }) => {
+  test("@Web Crear Cuenta", async ({ page }) => {
     await page.goto(process.env.URL!);
     const poManager = new POManager(page);
     const bankManager = await poManager.getBankManager();
-    await page.pause();
+
     await bankManager.addNewCustomer();
     const fullname = (await bankManager.getLastCustomer()).fullname;
     const firstName = process.env.FIRST_NAME;

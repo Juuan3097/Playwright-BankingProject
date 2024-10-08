@@ -23,6 +23,5 @@ export class Inputs {
     await this.dateInput.focus();
     await this.dateInput.pressSequentially("08301997");
     await this.textArea.first().fill("lorem ipsum");
-    await this.page.pause();
   }
 }

@@ -1,0 +1,508 @@
+{
+  "cookies": [
+    {
+      "name": "_gid",
+      "value": "GA1.3.2040628924.1728334638",
+      "domain": ".sudamerikargentina.com.ar",
+      "path": "/",
+      "expires": 1728421049,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_gat_UA-232474832-1",
+      "value": "1",
+      "domain": ".sudamerikargentina.com.ar",
+      "path": "/",
+      "expires": 1728334698,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "test_cookie",
+      "value": "CheckForPermission",
+      "domain": ".doubleclick.net",
+      "path": "/",
+      "expires": 1728335538.282376,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "OTZ",
+      "value": "7767177_68_68__68_",
+      "domain": "accounts.google.com",
+      "path": "/",
+      "expires": 1730926641,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "NID",
+      "value": "518=ZsP4sS_jdhrj5yiFW7FfY36JG0bF8Pp9H6kIT1tVSIvkIve05VrRuNeJutNIxG4hPybP1gmOk1Dx4YDw3h4hyUyTDF3Tl_faq_b0zaTZrPUJKzi6w5ZmedBPAVUD6JlGgVykzCEO8eyv7Xv_RMymhSJmDKhMbvrc9btfo7VRJnDlprYjh-34yXe6eoFoRQjyQ655Zy1il4KY8cW3QnCgxXd3U11i11A2gACCpAo0K63gQEvZRsaUL3nRaJUxvuwYHoXkrTXEgp2bLBpVaITL1tynPrETCI3yN4zyGDKUxAXyhTFv7QLowEmYmsnzCcPt5GuPRHnPZeEL2rfzt45etRyulXVfhmbvPxIMF4U_gJYnBfqQs6l6q9-a98LmfAviQLSnzsIEkfewzh_i7vu1d77VD8z_-7Rze_HRoRWHQn1yZ48ZEmNyorCBvgKB5ZEt2cO26ot8-txf3YK9rEev1l2fFA_ZMe4Pk3JS3RYnhvxFxV4lTR0SLUdpyVnSryOr0JFCCa7UTJIg4dOEBRNzGic1nLphsfl3X97F2Kt7olwJHIii8XUr6EFp8_Vc3Sdb7tjSR6SSoLAVnrTBlSCo6bqpro8v8MHFbx-ESiumS7pcR8ufIDJ2qVGQfbz9SRopI1Guu8rw1GNJDvM2W2TK75TyZqjN9BeNexSDBb7bqKBXy5HqktU",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1744145842.287097,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "SID",
+      "value": "g.a000owiFp-S9ALPm7adxjnfdK5nHkttjSofCpjOZfcMP7JVJUbUjxIznm-b1ENgQPxo7BN5MPAACgYKARcSARUSFQHGX2Mi4vn0mnDQdcgdslpg7vqKJBoVAUF8yKoWFJF3Qb7ofyVyxaL-kRuO0076",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1762894647.287202,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-1PSID",
+      "value": "g.a000owiFp-S9ALPm7adxjnfdK5nHkttjSofCpjOZfcMP7JVJUbUj1S0oXw4DWXLdRVO7-w5vnQACgYKATUSARUSFQHGX2Miqe-h-AyEc2dB7JABSCiEUhoVAUF8yKq7ei83M-DYk2LzyuJ74vB50076",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1762894647.287237,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-3PSID",
+      "value": "g.a000owiFp-S9ALPm7adxjnfdK5nHkttjSofCpjOZfcMP7JVJUbUjgT016J63fDE7VPFMu4TaGgACgYKAfcSARUSFQHGX2Mi04cphcAUSkDEQaMPazIw_hoVAUF8yKr21uSyQtxg4XkqgcCcDo_Q0076",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1762894647.287269,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "HSID",
+      "value": "A09Cu0NHfH7jE2BU-",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1762894647.287392,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "SSID",
+      "value": "APihZUOhmb7BhGUyu",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1762894647.287422,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "APISID",
+      "value": "fQZvNlPXdKzKWS-u/AAT-FaVmFgNxaTr5d",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1762894647.287454,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "SAPISID",
+      "value": "coj3KOZO1r2LYPSq/AxU_uPyuI_irOmAkX",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1762894647.287488,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-1PAPISID",
+      "value": "coj3KOZO1r2LYPSq/AxU_uPyuI_irOmAkX",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1762894647.287518,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-3PAPISID",
+      "value": "coj3KOZO1r2LYPSq/AxU_uPyuI_irOmAkX",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1762894647.287553,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "__Host-GAPS",
+      "value": "1:hQClwx9yyLqHAP2cI3MHo9gSxu3n1MLJ1dC899c7HNY6-z3LrJhkwzWxF-UoKqZiQxK8OjjB4RSDV7tEK2K8negdT8ueRw:JwF5va2Vxac9JRvq",
+      "domain": "accounts.google.com",
+      "path": "/",
+      "expires": 1762894647.287625,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "LSID",
+      "value": "s.AR|s.youtube:g.a000owiFp8o8rS-vMWupFPSHEk40CyB8rXcX2euVJwIfrREmSFEZ6pypGi_ycz0s-RRMiggzTgACgYKAU4SARUSFQHGX2MihXH-fWzZ_kTeAKyqnRcrwxoVAUF8yKooDt_sY8BEHOA1KLHnxHiK0076",
+      "domain": "accounts.google.com",
+      "path": "/",
+      "expires": 1762894647.501603,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Host-1PLSID",
+      "value": "s.AR|s.youtube:g.a000owiFp8o8rS-vMWupFPSHEk40CyB8rXcX2euVJwIfrREmSFEZmVlripirrEMv9WHJN0xVTAACgYKAQgSARUSFQHGX2Midk5FK0CvxuV1f5lzqMPKvRoVAUF8yKof_fVdh3oR52aaLyuUGZ3m0076",
+      "domain": "accounts.google.com",
+      "path": "/",
+      "expires": 1762894647.501714,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Host-3PLSID",
+      "value": "s.AR|s.youtube:g.a000owiFp8o8rS-vMWupFPSHEk40CyB8rXcX2euVJwIfrREmSFEZnNGzkfwTNEGx2TXPFsN-fQACgYKAbUSARUSFQHGX2Mit_Z4JC-l9tOFm2HjYMesDhoVAUF8yKqAqLoE6sgYgkhSDdRpAGXA0076",
+      "domain": "accounts.google.com",
+      "path": "/",
+      "expires": 1762894647.501769,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "ACCOUNT_CHOOSER",
+      "value": "AFx_qI5eeiDFa52f_cjI4EfxgDxejxeTIj51rMQ0YS_uV9clL7QKo6Z_-dusMkQLhwBQ65saJEvvyGZW5hcpDd5XKx6jf60c6gEOMe08eXMTm2WKnCJenCZpnLzFiYxJ9hVELSyrkxla",
+      "domain": "accounts.google.com",
+      "path": "/",
+      "expires": 1762894647.501808,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "SID",
+      "value": "g.a000owiFp-S9ALPm7adxjnfdK5nHkttjSofCpjOZfcMP7JVJUbUjxIznm-b1ENgQPxo7BN5MPAACgYKARcSARUSFQHGX2Mi4vn0mnDQdcgdslpg7vqKJBoVAUF8yKoWFJF3Qb7ofyVyxaL-kRuO0076",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1762894647.750802,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-1PSIDTS",
+      "value": "sidts-CjEBQlrA-C-AY8mII1wWGbPy_mgrkt-dZyWvJWBbm11EfDzsCrVBvyZ29icYj9E6XBlZEAA",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1759870647.750872,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-3PSIDTS",
+      "value": "sidts-CjEBQlrA-C-AY8mII1wWGbPy_mgrkt-dZyWvJWBbm11EfDzsCrVBvyZ29icYj9E6XBlZEAA",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1759870647.750896,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "__Secure-1PSID",
+      "value": "g.a000owiFp-S9ALPm7adxjnfdK5nHkttjSofCpjOZfcMP7JVJUbUj1S0oXw4DWXLdRVO7-w5vnQACgYKATUSARUSFQHGX2Miqe-h-AyEc2dB7JABSCiEUhoVAUF8yKq7ei83M-DYk2LzyuJ74vB50076",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1762894647.750917,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-3PSID",
+      "value": "g.a000owiFp-S9ALPm7adxjnfdK5nHkttjSofCpjOZfcMP7JVJUbUjgT016J63fDE7VPFMu4TaGgACgYKAfcSARUSFQHGX2Mi04cphcAUSkDEQaMPazIw_hoVAUF8yKr21uSyQtxg4XkqgcCcDo_Q0076",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1762894647.750936,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "HSID",
+      "value": "ATIcr75D1WIunv4O8",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1762894647.750963,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "SSID",
+      "value": "AUE8xH7XzZ2x4JS4Q",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1762894647.75098,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "APISID",
+      "value": "fQZvNlPXdKzKWS-u/AAT-FaVmFgNxaTr5d",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1762894647.750996,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "SAPISID",
+      "value": "coj3KOZO1r2LYPSq/AxU_uPyuI_irOmAkX",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1762894647.751016,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-1PAPISID",
+      "value": "coj3KOZO1r2LYPSq/AxU_uPyuI_irOmAkX",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1762894647.751036,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-3PAPISID",
+      "value": "coj3KOZO1r2LYPSq/AxU_uPyuI_irOmAkX",
+      "domain": ".youtube.com",
+      "path": "/",
+      "expires": 1762894647.751062,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "SID",
+      "value": "g.a000owiFp-S9ALPm7adxjnfdK5nHkttjSofCpjOZfcMP7JVJUbUjxIznm-b1ENgQPxo7BN5MPAACgYKARcSARUSFQHGX2Mi4vn0mnDQdcgdslpg7vqKJBoVAUF8yKoWFJF3Qb7ofyVyxaL-kRuO0076",
+      "domain": ".google.com.ar",
+      "path": "/",
+      "expires": 1762894648.030165,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-1PSID",
+      "value": "g.a000owiFp-S9ALPm7adxjnfdK5nHkttjSofCpjOZfcMP7JVJUbUj1S0oXw4DWXLdRVO7-w5vnQACgYKATUSARUSFQHGX2Miqe-h-AyEc2dB7JABSCiEUhoVAUF8yKq7ei83M-DYk2LzyuJ74vB50076",
+      "domain": ".google.com.ar",
+      "path": "/",
+      "expires": 1762894648.030274,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-3PSID",
+      "value": "g.a000owiFp-S9ALPm7adxjnfdK5nHkttjSofCpjOZfcMP7JVJUbUjgT016J63fDE7VPFMu4TaGgACgYKAfcSARUSFQHGX2Mi04cphcAUSkDEQaMPazIw_hoVAUF8yKr21uSyQtxg4XkqgcCcDo_Q0076",
+      "domain": ".google.com.ar",
+      "path": "/",
+      "expires": 1762894648.030316,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "HSID",
+      "value": "ATIcr75D1WIunv4O8",
+      "domain": ".google.com.ar",
+      "path": "/",
+      "expires": 1762894648.030345,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "SSID",
+      "value": "AUE8xH7XzZ2x4JS4Q",
+      "domain": ".google.com.ar",
+      "path": "/",
+      "expires": 1762894648.030372,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "APISID",
+      "value": "fQZvNlPXdKzKWS-u/AAT-FaVmFgNxaTr5d",
+      "domain": ".google.com.ar",
+      "path": "/",
+      "expires": 1762894648.030405,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "SAPISID",
+      "value": "coj3KOZO1r2LYPSq/AxU_uPyuI_irOmAkX",
+      "domain": ".google.com.ar",
+      "path": "/",
+      "expires": 1762894648.030441,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-1PAPISID",
+      "value": "coj3KOZO1r2LYPSq/AxU_uPyuI_irOmAkX",
+      "domain": ".google.com.ar",
+      "path": "/",
+      "expires": 1762894648.030482,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-3PAPISID",
+      "value": "coj3KOZO1r2LYPSq/AxU_uPyuI_irOmAkX",
+      "domain": ".google.com.ar",
+      "path": "/",
+      "expires": 1762894648.030519,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "NID",
+      "value": "518=NGC0jRDfLfDS62OY_RNdoiXfvIb8UayQNDmZJR7H_T-Ou2-OzSmDIWL5KEq5USRoDmmhGzoanu1-notHOmqrvWO7A_LZykYBhs-KOipbCpH2S7OJO1TtEl8rll72gi1fXgSM6BclPRcLR6hlVBFC-M8_9oe3d6z2VcLL8W9uL3djaCprq7IEwNFuCwuvHg",
+      "domain": ".google.com.ar",
+      "path": "/",
+      "expires": 1744145848.030555,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "SIDCC",
+      "value": "AKEyXzVv0jCM3gXXqo3uXRkGh7aNwYurD8VaCOgX-d_CrPtTICXcPJQp9_2ZGcfjA2QfztFGSQ",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1759870648.590111,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-1PSIDCC",
+      "value": "AKEyXzW5PC1iFkTxTs2BVcF8eIbdmmbz4LL96_mpA8qIUbp9Ji0cC6xB_7GIx_Jr0-cHJcoOUw",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1759870648.590199,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga",
+      "value": "GA1.1.1164289486.1728334638",
+      "domain": ".sudamerikargentina.com.ar",
+      "path": "/",
+      "expires": 1762894649.183623,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_Y6EG4FYV13",
+      "value": "GS1.1.1728334638.1.1.1728334649.49.0.0",
+      "domain": ".sudamerikargentina.com.ar",
+      "path": "/",
+      "expires": 1762894649.190315,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_7H9VZYQ3T0",
+      "value": "GS1.3.1728334638.1.1.1728334649.0.0.0",
+      "domain": ".sudamerikargentina.com.ar",
+      "path": "/",
+      "expires": 1762894649.23345,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__Secure-3PSIDCC",
+      "value": "AKEyXzU4cDmBDvC8w4A8Y_KNy2ne1ejnrucXlteWqrppbkCgIQSduvcxlMLUNzQ7hyR3-lU7oA",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1759870650.137471,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_dd_s",
+      "value": "rum=2&id=e2aedb0a-bbcb-482c-9886-373510423b9f&created=1728334637547&expire=1728335549066",
+      "domain": "www.sudamerikargentina.com.ar",
+      "path": "/",
+      "expires": 1728335552,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "_ga_YXXC3Z51SH",
+      "value": "GS1.1.1728334638.1.1.1728334652.0.0.0",
+      "domain": ".sudamerikargentina.com.ar",
+      "path": "/",
+      "expires": 1762894652.30735,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://www.sudamerikargentina.com.ar",
+      "localStorage": [
+        {
+          "name": "persist:root",
+          "value": "{\"slice.auth\":\"{\\\"user\\\":{\\\"id\\\":336509,\\\"username\\\":\\\"jrios@makingsense.com\\\",\\\"email\\\":\\\"jrios@makingsense.com\\\",\\\"firstName\\\":\\\"Juan\\\",\\\"lastName\\\":\\\"Rios\\\",\\\"photoURL\\\":\\\"https://lh3.googleusercontent.com/a/ACg8ocJX-AJHReL7_aN-th2Dq1t7AMC2I-AZl-y9D5abF0PFWEfZ6Eo=s96-c\\\",\\\"workType\\\":8,\\\"phone\\\":\\\"1136742673\\\",\\\"phoneVerifiedAt\\\":null,\\\"document\\\":\\\"40588155\\\",\\\"business\\\":null,\\\"status\\\":null,\\\"information\\\":null,\\\"tokenVersion\\\":1,\\\"openingHours\\\":\\\"Indicar hora\\\",\\\"acceptedTermsAndConditions\\\":0,\\\"AFIPRegistrationProof\\\":null,\\\"IIBBRegistrationProof\\\":null,\\\"customerId\\\":null,\\\"lastActivityAt\\\":\\\"2024-10-07T20:47:31.000Z\\\",\\\"createdAt\\\":\\\"2024-10-07T14:41:50.000Z\\\",\\\"updatedAt\\\":\\\"2024-10-07T20:47:31.000Z\\\",\\\"location\\\":{\\\"lat\\\":\\\"-34.5334657\\\",\\\"long\\\":\\\"-58.51402950000001\\\",\\\"address\\\":\\\"Italia 3814, B1604CQP Florida Oeste, Provincia de Buenos Aires, Argentina\\\",\\\"streetName\\\":\\\"Italia\\\",\\\"streetNumber\\\":\\\"3814\\\",\\\"zipcode\\\":\\\"B1604\\\",\\\"info\\\":null,\\\"city\\\":682,\\\"state\\\":64,\\\"country\\\":1,\\\"id\\\":265653,\\\"createdAt\\\":\\\"2024-10-07T14:41:50.000Z\\\",\\\"updatedAt\\\":\\\"2024-10-07T14:41:50.000Z\\\",\\\"latlng\\\":{\\\"x\\\":\\\"-34.5334657\\\",\\\"y\\\":\\\"-58.51402950000001\\\"}},\\\"documentType\\\":{\\\"id\\\":2,\\\"name\\\":\\\"DNI\\\",\\\"createdAt\\\":\\\"2020-11-06T01:38:09.000Z\\\",\\\"updatedAt\\\":\\\"2020-11-06T01:38:09.000Z\\\"},\\\"identifier\\\":\\\"TseNNVQTuEhPmggIiM2F97VD2ui1\\\",\\\"provider\\\":\\\"firebase\\\",\\\"protocol\\\":\\\"token\\\",\\\"tokens\\\":null,\\\"roles\\\":[2],\\\"token\\\":\\\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzM2NTA5LCJyb2xlcyI6WzJdLCJ0b2tlblZlcnNpb24iOjEsImlhdCI6MTcyODMzNDY2MX0.TShD8MkWzXD1PMwPckmxH1zSF3senOzxtNBqYUBasW0\\\"},\\\"token\\\":\\\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzM2NTA5LCJyb2xlcyI6WzJdLCJ0b2tlblZlcnNpb24iOjEsImlhdCI6MTcyODMzNDY2MX0.TShD8MkWzXD1PMwPckmxH1zSF3senOzxtNBqYUBasW0\\\",\\\"signupForm\\\":{\\\"user\\\":null,\\\"token\\\":null,\\\"provider\\\":null},\\\"isInDeliveryArea\\\":false,\\\"isInPickupArea\\\":false,\\\"isValidClientCode\\\":false,\\\"bootstrapState\\\":\\\"pending\\\",\\\"providerClient\\\":null,\\\"salesman\\\":null}\",\"slice.site\":\"{\\\"loaded\\\":false,\\\"site\\\":{\\\"id\\\":79,\\\"name\\\":\\\"Sudamerik Argentina\\\",\\\"type\\\":\\\"PROPIO\\\",\\\"provider\\\":{\\\"id\\\":241,\\\"published\\\":true,\\\"deletedAt\\\":null,\\\"location\\\":{\\\"lat\\\":null,\\\"long\\\":null,\\\"address\\\":null,\\\"streetName\\\":null,\\\"streetNumber\\\":null,\\\"zipcode\\\":null,\\\"latlng\\\":{\\\"x\\\":null,\\\"y\\\":null}},\\\"country\\\":{\\\"id\\\":1,\\\"code\\\":\\\"AR\\\",\\\"phoneCode\\\":\\\"54\\\"}},\\\"createdAt\\\":\\\"2024-02-23T14:49:07.000Z\\\",\\\"updatedAt\\\":null,\\\"deletedAt\\\":null,\\\"config\\\":{\\\"website.title\\\":\\\"Sudarmerik Argentina\\\",\\\"website.manifest.theme-color\\\":null,\\\"website.manifest.msapplication-TileImage\\\":null,\\\"website.manifest.msapplication-TileColor\\\":null,\\\"website.manifest.msapplication-navbutton-color\\\":null,\\\"website.manifest.file\\\":\\\"https://resources.centraldeofertas.com.ar/sites/sudamerikargentina/manifest.json\\\",\\\"website.manifest.application-name\\\":null,\\\"website.manifest.apple-touch-icon\\\":null,\\\"website.logo-width\\\":null,\\\"website.logo-height\\\":null,\\\"website.logo\\\":\\\"https://resources.centraldeofertas.com.ar/sites/sudamerikargentina/logo.png\\\",\\\"website.keywords\\\":null,\\\"website.icon\\\":\\\"https://resources.centraldeofertas.com.ar/sites/sudamerikargentina/favicon.png\\\",\\\"website.hostnames\\\":[\\\"www.sudamerikargentina.com.ar\\\",\\\"sudamerikargentina.tiendapropio.com\\\"],\\\"website.description\\\":null,\\\"theme.colors.warning-content\\\":\\\"#d97706\\\",\\\"theme.colors.warning\\\":\\\"#EADB26\\\",\\\"theme.colors.success-content\\\":\\\"#16a34a\\\",\\\"theme.colors.success\\\":\\\"#71D230\\\",\\\"theme.colors.secondary-focus\\\":\\\"#020203\\\",\\\"theme.colors.secondary-content\\\":\\\"#ffffff\\\",\\\"theme.colors.secondary\\\":\\\"#101115\\\",\\\"theme.colors.primary-focus\\\":null,\\\"theme.colors.primary-content\\\":null,\\\"theme.colors.primary\\\":null,\\\"theme.colors.neutral-focus\\\":\\\"#d3cfc4\\\",\\\"theme.colors.neutral-content\\\":\\\"#3d4451\\\",\\\"theme.colors.neutral\\\":\\\"#ededed\\\",\\\"theme.colors.info-content\\\":null,\\\"theme.colors.info\\\":null,\\\"theme.colors.error-content\\\":\\\"#ffffff\\\",\\\"theme.colors.error\\\":\\\"#ff4a4a\\\",\\\"theme.colors.base-content\\\":null,\\\"theme.colors.base-300\\\":null,\\\"theme.colors.base-200\\\":null,\\\"theme.colors.base-100\\\":null,\\\"theme.colors.accent-focus\\\":\\\"#a32622\\\",\\\"theme.colors.accent-content\\\":\\\"#ffffff\\\",\\\"theme.colors.accent\\\":\\\"#df342f\\\",\\\"status.maintenance\\\":false,\\\"status.inactive\\\":false,\\\"sale.price.before-login\\\":false,\\\"feature.login.client-code.sale.price\\\":false,\\\"feature.login.client-code.indicator.text\\\":\\\"Pedí­selo a tu proveedor tocando abajo el botón \\\\\\\"Solicitar código\\\\\\\"\\\",\\\"feature.has-custom-category\\\":true,\\\"feature.checkout.logistic.pickup\\\":false,\\\"feature.checkout.logistic.delivery\\\":true,\\\"contact.whatsapp\\\":\\\"5491120248229\\\",\\\"contact.twitter\\\":null,\\\"contact.taxId\\\":null,\\\"contact.phone\\\":\\\"5491120248229\\\",\\\"contact.instagram\\\":\\\"https://www.instagram.com/gruposudamerik/\\\",\\\"contact.facebook\\\":\\\"https://www.facebook.com/Gruposudamerik\\\",\\\"contact.email\\\":\\\"ventas@sudamerikargentina.com.ar\\\",\\\"contact.address\\\":\\\"Don Bosco 4760, La reja.\\\",\\\"components.SocialIcon.variant\\\":null,\\\"components.NavigationList.variant\\\":null,\\\"components.NavigationLink.variant\\\":null,\\\"components.NavigationLink.ghost\\\":false,\\\"components.Header.variant\\\":null,\\\"components.Footer.variant\\\":null,\\\"components.CategoryListItem.variant\\\":null,\\\"components.active-variant\\\":null,\\\"chat.title\\\":null,\\\"chat.themes.colors.primary-content\\\":null,\\\"chat.themes.colors.primary\\\":null,\\\"chat.hostnames\\\":[\\\"sudamerikargentina.tiendapropio.chat\\\"]}},\\\"token\\\":\\\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlIjp7ImlkIjo3OSwibmFtZSI6IlN1ZGFtZXJpayBBcmdlbnRpbmEiLCJ0eXBlIjoiUFJPUElPIiwicHJvdmlkZXIiOnsiaWQiOjI0MSwicHVibGlzaGVkIjp0cnVlLCJkZWxldGVkQXQiOm51bGwsImxvY2F0aW9uIjp7ImxhdCI6bnVsbCwibG9uZyI6bnVsbCwiYWRkcmVzcyI6bnVsbCwic3RyZWV0TmFtZSI6bnVsbCwic3RyZWV0TnVtYmVyIjpudWxsLCJ6aXBjb2RlIjpudWxsLCJsYXRsbmciOnsieCI6bnVsbCwieSI6bnVsbH19LCJjb3VudHJ5Ijp7ImlkIjoxLCJjb2RlIjoiQVIiLCJwaG9uZUNvZGUiOiI1NCJ9fSwiY3JlYXRlZEF0IjoiMjAyNC0wMi0yM1QxNDo0OTowNy4wMDBaIiwidXBkYXRlZEF0IjpudWxsLCJkZWxldGVkQXQiOm51bGx9LCJmZWF0dXJlcyI6eyJyZXF1aXJlQ2xpZW50Q29kZVRvVmlld1ByaWNlcyI6eyJlbmFibGVkIjpmYWxzZX0sInNob3dUb3RhbFdpdGhvdXRUYXhlcyI6eyJlbmFibGVkIjp0cnVlfSwic2hvd1ByaWNlQmVmb3JlTG9naW4iOnsiZW5hYmxlZCI6ZmFsc2V9LCJhbGxvd0NvdXBvbk1vZHVsZSI6eyJlbmFibGVkIjp0cnVlfX0sImNoYW5uZWwiOnsiaWQiOjIsIm5hbWUiOiJQUk9QSU9fV0VCIn0sImlhdCI6MTcyODMzNDIzMn0.VKJ8suzxNbg2sq-HQ_j12nWas9ItpwAm4Q4RPIVR1KU\\\",\\\"bootstrapState\\\":\\\"success\\\"}\",\"_persist\":\"{\\\"version\\\":-1,\\\"rehydrated\\\":true}\"}"
+        }
+      ]
+    },
+    {
+      "origin": "https://www.google.com",
+      "localStorage": [
+        {
+          "name": "rc::a",
+          "value": "MWphcHhtN2tzZTZpdQ=="
+        },
+        {
+          "name": "rc::f",
+          "value": "0aACPzaIeFetNDl378545vMom9_WyY1oZOOnPqooqo9w53YWSx5iWQP46D2rZx91w3F5kbHzI"
+        }
+      ]
+    }
+  ]
+}

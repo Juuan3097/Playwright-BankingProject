@@ -28,7 +28,6 @@ export class Checkbox {
   }
 
   async checkIcons() {
-    await this.page.pause();
     console.log(
       "La cantidad de elementos encontrados son: " +
         (await this.checkboxIcons.count())

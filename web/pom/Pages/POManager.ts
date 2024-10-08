@@ -1,18 +1,20 @@
 import { Page } from "@playwright/test";
-import { BankManager } from "./BankManagerPage";
-import { Customer } from "./CustomerLoginPage";
-import { AddRemove } from "./AddRemovePage";
-import { Checkbox } from "./CheckboxPage";
-import { RadioButton } from "./RadioButtonPage";
-import { Tooltip } from "./TooltipsPage";
-import { Inputs } from "./InputPage";
-import { UploadFile } from "./FileUploadPage";
-import { Alert } from "./NotificationAlertPage";
-import { Download } from "./DownloadPage";
-import { Slider } from "./SliderPage";
-import { DynamicTable } from "./DynamicTablePage";
-import { DragNDropMedium } from "./Drag&DropMediumPage";
-import { DragNDropHard } from "./Drag&DropHardPage";
+import { BankManager } from "./BankingPages/BankManagerPage";
+import { Customer } from "./BankingPages/CustomerLoginPage";
+import { AddRemove } from "./NearFormPages/AddRemovePage";
+import { Checkbox } from "./NearFormPages/CheckboxPage";
+import { RadioButton } from "./NearFormPages/RadioButtonPage";
+import { Tooltip } from "./NearFormPages/TooltipsPage";
+import { Inputs } from "./NearFormPages/InputPage";
+import { UploadFile } from "./NearFormPages/FileUploadPage";
+import { Alert } from "./NearFormPages/NotificationAlertPage";
+import { Download } from "./NearFormPages/DownloadPage";
+import { Slider } from "./NearFormPages/SliderPage";
+import { DynamicTable } from "./NearFormPages/DynamicTablePage";
+import { DragNDropMedium } from "./NearFormPages/Drag&DropMediumPage";
+import { DragNDropHard } from "./NearFormPages/Drag&DropHardPage";
+import { Login } from "./AdidasPages/LoginPage";
+import { LoginSudamerik } from "./SudamerikPages/LoginPage";
 
 export class POManager {
   page: Page;
@@ -30,6 +32,8 @@ export class POManager {
   dynamicTable: DynamicTable;
   dragNDropMedium: DragNDropMedium;
   dragNDropHard: DragNDropHard;
+  adidasLogin: Login;
+  sudamerikLogin: LoginSudamerik;
 
   constructor(page: Page) {
     this.page = page;
@@ -47,6 +51,8 @@ export class POManager {
     this.dynamicTable = new DynamicTable(this.page);
     this.dragNDropMedium = new DragNDropMedium(this.page);
     this.dragNDropHard = new DragNDropHard(this.page);
+    this.adidasLogin = new Login(this.page);
+    this.sudamerikLogin = new LoginSudamerik(this.page);
   }
 
   async getBankManager() {
@@ -103,5 +109,13 @@ export class POManager {
 
   async getDragNDropHard() {
     return this.dragNDropHard;
+  }
+
+  async getLoginAdidas() {
+    return this.adidasLogin;
+  }
+
+  async getSudamerikLogin() {
+    return this.sudamerikLogin;
   }
 }

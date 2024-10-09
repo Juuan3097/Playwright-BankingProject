@@ -1,5 +1,9 @@
 import { test, expect, Page } from "@playwright/test";
-import { POManager } from "../pom/Pages/POManager";
+import { SearchAndCart } from "../pom/Pages/SudamerikPages/Search&CartPage";
+import { SearchAndCartChecker } from "../pom/Checker/SearchAndCartChecker";
+import { Checkout } from "../pom/Pages/SudamerikPages/CheckoutPage";
+import { LoginSudamerik } from "../pom/Pages/SudamerikPages/LoginPage";
+import { LoginChecker } from "../pom/Checker/LoginChecker";
 
 test.describe(" Sudamerik", () => {
   test(
@@ -9,15 +13,14 @@ test.describe(" Sudamerik", () => {
     },
     async ({ page }) => {
       await page.goto(process.env.SUDAMERIK_HOME!);
-      const poManager = new POManager(page);
-      const search = await poManager.getSearchAndCart();
+      const searchPage = new SearchAndCart(page);
+      const checkProduct = new SearchAndCartChecker(page);
       const product = "MACRITAS Nachos Original";
       const quantity = 3;
-      await search.searchProduct(product, quantity);
-      await search.gotToCart();
+      await searchPage.searchProduct(product, quantity);
+      await searchPage.gotToCart();
       await page.waitForLoadState("networkidle");
-      const cartProduct = await page.locator("article.card");
-      expect(await cartProduct).toBeVisible();
+      await checkProduct.checkCartProduct();
     }
   );
   test(
@@ -27,13 +30,12 @@ test.describe(" Sudamerik", () => {
     },
     async ({ page }) => {
       await page.goto(process.env.SUDAMERIK_HOME!);
-      const poManager = new POManager(page);
-      const search = await poManager.getSearchAndCart();
-      const confirmCart = await search.confirmCartBtn;
+      const searchPage = new SearchAndCart(page);
+      const checkProduct = new SearchAndCartChecker(page);
       const quantity = 5;
-      await search.addProduct(quantity);
-      await search.gotToCart();
-      expect(await confirmCart).toBeVisible();
+      await searchPage.addProduct(quantity);
+      await searchPage.gotToCart();
+      await checkProduct.checkCartProducts();
     }
   );
   test(
@@ -43,14 +45,13 @@ test.describe(" Sudamerik", () => {
     },
     async ({ page }) => {
       await page.goto(process.env.SUDAMERIK_HOME!);
-      const poManager = new POManager(page);
-      const search = await poManager.getSearchAndCart();
+      const searchPage = new SearchAndCart(page);
+      const checkProduct = new SearchAndCartChecker(page);
       const quantity = 1;
-      await search.addProduct(quantity);
-      await search.gotToCart();
-      const disabledBtn = await search.confirmBtnDisabled;
+      await searchPage.addProduct(quantity);
+      await searchPage.gotToCart();
       await page.waitForLoadState("networkidle");
-      expect(await disabledBtn).toBeVisible();
+      await checkProduct.checkDisabledBtn();
     }
   );
   test(
@@ -60,14 +61,13 @@ test.describe(" Sudamerik", () => {
     },
     async ({ page }) => {
       await page.goto(process.env.SUDAMERIK_HOME!);
-      const poManager = new POManager(page);
-      const search = await poManager.getSearchAndCart();
+      const searchPage = new SearchAndCart(page);
+      const checkProduct = new SearchAndCartChecker(page);
       const quantity = 5;
-      await search.addProduct(quantity);
-      await search.gotToCart();
-      await search.deleteProducts();
-      const emptyCartMessage = await search.emptyCartMsg;
-      expect(await emptyCartMessage).toBeVisible();
+      await searchPage.addProduct(quantity);
+      await searchPage.gotToCart();
+      await searchPage.deleteProducts();
+      await checkProduct.checkEmptyCart();
     }
   );
   test(
@@ -77,13 +77,12 @@ test.describe(" Sudamerik", () => {
     },
     async ({ page }) => {
       await page.goto(process.env.SUDAMERIK_HOME!);
-      const poManager = new POManager(page);
-      const search = await poManager.getSearchAndCart();
-      const checkout = await poManager.getCheckout();
+      const searchPage = new SearchAndCart(page);
+      const checkoutPage = new Checkout(page);
       const quantity = 5;
-      await search.addProduct(quantity);
-      await search.confirmCart();
-      await checkout.completeCheckout();
+      await searchPage.addProduct(quantity);
+      await searchPage.confirmCart();
+      await checkoutPage.completeCheckout();
     }
   );
   test(
@@ -93,12 +92,11 @@ test.describe(" Sudamerik", () => {
     },
     async ({ page }) => {
       await page.goto(process.env.SUDAMERIK_HOME!);
-      const poManager = new POManager(page);
-      const logout = await poManager.getSudamerikLogin();
-      await logout.logOut();
+      const loginPage = new LoginSudamerik(page);
+      const loginChecker = new LoginChecker(page);
+      await loginPage.logOut();
       await page.waitForLoadState("networkidle");
-      const loginBtn = await logout.loginBtn;
-      expect(loginBtn).toBeVisible();
+      await loginChecker.checkLogout();
     }
   );
 });

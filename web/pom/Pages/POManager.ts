@@ -15,6 +15,8 @@ import { DragNDropMedium } from "./NearFormPages/Drag&DropMediumPage";
 import { DragNDropHard } from "./NearFormPages/Drag&DropHardPage";
 import { Login } from "./AdidasPages/LoginPage";
 import { LoginSudamerik } from "./SudamerikPages/LoginPage";
+import { SearchAndCart } from "./SudamerikPages/Search&CartPage";
+import { Checkout } from "./SudamerikPages/CheckoutPage";
 
 export class POManager {
   page: Page;
@@ -34,6 +36,8 @@ export class POManager {
   dragNDropHard: DragNDropHard;
   adidasLogin: Login;
   sudamerikLogin: LoginSudamerik;
+  searchAndCart: SearchAndCart;
+  checkout: Checkout;
 
   constructor(page: Page) {
     this.page = page;
@@ -53,6 +57,8 @@ export class POManager {
     this.dragNDropHard = new DragNDropHard(this.page);
     this.adidasLogin = new Login(this.page);
     this.sudamerikLogin = new LoginSudamerik(this.page);
+    this.searchAndCart = new SearchAndCart(this.page);
+    this.checkout = new Checkout(this.page);
   }
 
   async getBankManager() {
@@ -117,5 +123,13 @@ export class POManager {
 
   async getSudamerikLogin() {
     return this.sudamerikLogin;
+  }
+
+  async getSearchAndCart() {
+    return this.searchAndCart;
+  }
+
+  async getCheckout() {
+    return this.checkout;
   }
 }

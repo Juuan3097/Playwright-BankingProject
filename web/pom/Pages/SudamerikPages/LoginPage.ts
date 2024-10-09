@@ -7,6 +7,8 @@ export class LoginSudamerik {
   inputEmail: Locator;
   inputPassword: Locator;
   nextBtn: Locator;
+  profileBtn: Locator;
+  logout: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -15,6 +17,8 @@ export class LoginSudamerik {
     this.inputPassword = page.locator("input[type='password']").first();
     this.loginBtn = page.getByRole("link", { name: "Ingresar" });
     this.nextBtn = page.getByRole("button", { name: "Next" });
+    this.profileBtn = page.getByRole("link", { name: "Perfil" });
+    this.logout = page.getByText("Cerrar sesión");
   }
 
   async navigateToLogin() {
@@ -39,5 +43,11 @@ export class LoginSudamerik {
         .getByRole("link", { name: " Perfil" })
         .waitFor({ state: "visible" });
     }
+  }
+
+  async logOut() {
+    await this.profileBtn.click();
+    await this.logout.waitFor({ state: "visible" });
+    await this.logout.click();
   }
 }

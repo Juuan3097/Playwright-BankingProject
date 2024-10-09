@@ -29,7 +29,6 @@ export class Login {
 
   async loginStorage() {
     await this.handleCookies();
-    await this.page.pause();
     if (await this.loginBtn.isVisible()) {
       await this.page.waitForTimeout(3000);
       await this.inputEmail.fill(process.env.ADIDAS_EMAIL!);
@@ -47,7 +46,6 @@ export class Login {
   }
 
   async handleCookies() {
-    await this.page.pause();
     await this.selectCookies.click();
     await this.saveCookies.click();
   }

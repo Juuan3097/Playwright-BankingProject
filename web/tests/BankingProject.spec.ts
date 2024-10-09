@@ -1,7 +1,7 @@
 import { test, expect, chromium, Page } from "@playwright/test";
 import { POManager } from "../pom/Pages/POManager";
 
-test.describe.skip("@Web BankingProject", () => {
+test.describe("@Web BankingProject", () => {
   test("@Web Add New Customer", async ({ page }) => {
     await page.goto(process.env.URL!);
     const poManager = new POManager(page);

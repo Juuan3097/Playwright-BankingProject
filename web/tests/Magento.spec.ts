@@ -11,7 +11,7 @@ test.describe(" Magento", () => {
   test(
     "Agregar a Wishlist productos con 4 o mas estrellas",
     {
-      tag: "",
+      tag: "@Magento-Smoke",
     },
     async ({ page }) => {
       await page.goto(process.env.MAGENTO_HOME!);
@@ -26,7 +26,7 @@ test.describe(" Magento", () => {
   test(
     "Agregar productos al carrito",
     {
-      tag: "",
+      tag: "@Magento-Smoke",
     },
     async ({ page }) => {
       await page.goto(process.env.MAGENTO_HOME!);
@@ -42,7 +42,7 @@ test.describe(" Magento", () => {
   test(
     "Completar checkout desde wishlist",
     {
-      tag: "",
+      tag: "@Magento-Smoke",
     },
     async ({ page }) => {
       await page.goto(process.env.MAGENTO_HOME!);
@@ -76,7 +76,7 @@ test.describe(" Magento", () => {
   test(
     "Editar contraseña",
     {
-      tag: "",
+      tag: "@Magento-Smoke",
     },
     async ({ page }) => {
       await page.goto(process.env.MAGENTO_HOME!);

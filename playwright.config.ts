@@ -39,17 +39,30 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
-      name: "setup",
+      name: "sudamerik-setup",
       use: { ...devices["Desktop Chrome"] },
-      testMatch: /.*\.setup\.ts/,
+      testMatch: ["SudamerikLogin.setup.ts"],
     },
     {
-      name: "login",
+      name: "Sudamerik-chrome-project",
       use: {
         ...devices["Desktop Chrome"],
         storageState: "web/playwright/.auth/user.json",
       },
-      dependencies: ["setup"],
+      dependencies: ["sudamerik-setup"],
+    },
+    {
+      name: "magento-setup",
+      use: { ...devices["Desktop Chrome"] },
+      testMatch: ["MagentoLogin.setup.ts"],
+    },
+    {
+      name: "Magento-chrome-project",
+      use: {
+        ...devices["Desktop Chrome"],
+        storageState: "web/playwright/.auth/magento-storageState.json",
+      },
+      dependencies: ["magento-setup"],
     },
 
     // {

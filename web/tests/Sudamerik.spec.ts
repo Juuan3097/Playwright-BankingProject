@@ -1,9 +1,9 @@
 import { test, expect, Page } from "@playwright/test";
 import { SearchAndCart } from "../pom/Pages/SudamerikPages/Search&CartPage";
-import { SearchAndCartChecker } from "../pom/Checker/SearchAndCartChecker";
+import { SearchAndCartChecker } from "../pom/Checker/SudamerikChecker/SearchAndCartChecker";
 import { Checkout } from "../pom/Pages/SudamerikPages/CheckoutPage";
 import { LoginSudamerik } from "../pom/Pages/SudamerikPages/LoginPage";
-import { LoginChecker } from "../pom/Checker/LoginChecker";
+import { LoginChecker } from "../pom/Checker/SudamerikChecker/LoginChecker";
 
 test.describe(" Sudamerik", () => {
   test(
@@ -70,7 +70,7 @@ test.describe(" Sudamerik", () => {
       await checkProduct.checkEmptyCart();
     }
   );
-  test(
+  test.only(
     " Completar checkout",
     {
       tag: "@Smoke",
@@ -79,7 +79,7 @@ test.describe(" Sudamerik", () => {
       await page.goto(process.env.SUDAMERIK_HOME!);
       const searchPage = new SearchAndCart(page);
       const checkoutPage = new Checkout(page);
-      const quantity = 5;
+      const quantity = 6;
       await searchPage.addProduct(quantity);
       await searchPage.confirmCart();
       await checkoutPage.completeCheckout();

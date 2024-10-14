@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "smokeTests": "npx playwright test --grep @Smoke"
+    "Sudamerik-Smoke-Tests": "npx playwright test --project=Sudamerik-chrome-project --grep=@Smoke",
+    "magento-Smoke-Tests": "npx playwright test --project=Magento-chrome-project --grep=Magento-Smoke"
   },
   "keywords": [],
   "author": "",

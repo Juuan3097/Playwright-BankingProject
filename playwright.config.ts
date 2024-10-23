@@ -64,6 +64,10 @@ export default defineConfig({
       },
       dependencies: ["magento-setup"],
     },
+    {
+      name: "chromium",
+      use: { ...devices["Desktop Chrome"] },
+    },
 
     // {
     //   name: "firefox",

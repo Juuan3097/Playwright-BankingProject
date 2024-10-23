@@ -70,7 +70,7 @@ test.describe(" Sudamerik", () => {
       await checkProduct.checkEmptyCart();
     }
   );
-  test.only(
+  test(
     " Completar checkout",
     {
       tag: "@Smoke",

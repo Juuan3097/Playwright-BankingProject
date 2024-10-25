@@ -7,7 +7,7 @@ export class DeletePage {
     this.request = request;
   }
 
-  async DeleteUsers(endpoint: string, data: object, dataName: string) {
+  async DeleteUsers(endpoint: string, dataName: string) {
     const newUser = await this.request.delete(`${endpoint}/${dataName}}`);
     const apiStatus = await newUser.status();
     return { apiStatus };

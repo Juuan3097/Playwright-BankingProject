@@ -11,6 +11,8 @@ export class PostPage {
     const newUser = await this.request.post(`${endpoint}`, { data });
     const apiStatus = await newUser.status();
     const body = await newUser.json();
+    // console.log("Body:");
+    // console.log(body);
     return { apiStatus, body };
   }
 }

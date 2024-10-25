@@ -1,4 +1,5 @@
 import { test, expect, APIRequestContext } from "@playwright/test";
+import { z } from "zod";
 
 export class GetChecker {
   request: APIRequestContext;
@@ -13,5 +14,18 @@ export class GetChecker {
 
   async validateNotOkResponse(apiStatus: boolean) {
     expect(await apiStatus).toBeFalsy();
+  }
+
+  async validateType(bodyElement: object) {
+    const bodyResponse = z
+      .object({
+        id: z.number(),
+        email: z.string(),
+        first_name: z.string(),
+        last_name: z.string(),
+        avatar: z.string(),
+      })
+      .array();
+    expect(() => bodyResponse.parse(bodyElement)).not.toThrow();
   }
 }

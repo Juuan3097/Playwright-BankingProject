@@ -8,10 +8,8 @@ export class GetPage {
   }
 
   async getUsers(endpoint: string) {
-    const getUsers = await this.request.get(`${endpoint}`);
-    const body = await getUsers.json();
-    // console.log("Body:");
-    // console.log(body);
-    return { getUsers, body };
+    const apiResponse = await this.request.get(`${endpoint}`);
+    const body = await apiResponse.json();
+    return { apiResponse, body };
   }
 }

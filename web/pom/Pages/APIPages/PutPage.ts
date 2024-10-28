@@ -7,10 +7,11 @@ export class PutPage {
     this.request = request;
   }
 
-  async PutUsers(endpoint: string, data: object) {
-    const newUser = await this.request.put(`${endpoint}`, { data });
-    const apiStatus = await newUser.status();
-    const body = await newUser.json();
-    return { apiStatus, body };
+  async putUsers(endpoint: string, data: object) {
+    const apiResponse = await this.request.put(`${endpoint}`, { data });
+    const body = await apiResponse.json();
+    console.log("Body:");
+    console.log(body);
+    return { apiResponse, body };
   }
 }

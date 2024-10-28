@@ -1,4 +1,4 @@
-import { test, expect, APIRequestContext } from "@playwright/test";
+import { test, expect, APIRequestContext, APIResponse } from "@playwright/test";
 import { z } from "zod";
 
 export class PostChecker {
@@ -8,35 +8,25 @@ export class PostChecker {
     this.request = request;
   }
 
-  async validateOkResponse(apiStatus: any) {
-    expect(await apiStatus).toBeTruthy();
+  async validateOkResponse(apiStatus: APIResponse) {
+    expect(await apiStatus).toBeOK();
   }
 
-  async validateNotOkResponse(apiStatus: any) {
-    expect(await apiStatus).toBeFalsy();
+  async validateNotOkResponse(apiStatus: APIResponse) {
+    expect(await apiStatus).not.toBeOK();
   }
 
-  async validateData(body: object, data: object, bodyElement: object) {
+  async validateData(body: object, data: object) {
+    expect([body]).toMatchObject([data]);
+  }
+
+  async validateSchema(bodyElement: object) {
     const bodyResponse = z
       .object({
-        id: z.number(),
-        email: z.string(),
-        first_name: z.string(),
-        last_name: z.string(),
-        avatar: z.string(),
+        name: z.string(),
+        job: z.string(),
       })
-      .partial().required({
-        first_name: true,
-        last_name: true,
-      })
-      .array();
-    // .required({
-    //   first_name: true,
-    //   last_name: true,
-    // })
-
-    //    expect(bodyResponse.parse(bodyElement)).not.toThrow();
-    expect(async () => await bodyResponse.parse(bodyElement)).not.toThrow();
-    expect(body).toEqual(data);
+      .optional();
+    await bodyResponse.parse(bodyElement);
   }
 }

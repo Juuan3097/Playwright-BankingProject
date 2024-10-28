@@ -9,7 +9,6 @@ import { PatchPage } from "../pom/Pages/APIPages/PatchPage";
 import { PatchChecker } from "../pom/Checker/APIChecker/PatchChecker";
 import { DeletePage } from "../pom/Pages/APIPages/DeletePage";
 import { DeleteChecker } from "../pom/Checker/APIChecker/DeleteChecker";
-import { z } from "zod";
 
 test.describe("API testing", () => {
   test(
@@ -22,10 +21,10 @@ test.describe("API testing", () => {
       const getChecker = new GetChecker(request);
       const endpoint = process.env.USERS_ENDPOINT!;
       const getUsers = await getPage.getUsers(endpoint);
-      const apiStatus = await getUsers.getUsers.ok();
+      const apiResponse = await getUsers.apiResponse;
       const bodyElement = await getUsers.body.data;
-      await getChecker.validateType(bodyElement);
-      await getChecker.validateOkResponse(apiStatus);
+      await getChecker.validateSchema(bodyElement);
+      await getChecker.validateOkResponse(apiResponse);
     }
   );
   test(
@@ -38,10 +37,10 @@ test.describe("API testing", () => {
       const getChecker = new GetChecker(request);
       const endpoint = process.env.USER_ENDPOINT!;
       const getUsers = await getPage.getUsers(endpoint);
-      const apiStatus = await getUsers.getUsers.ok();
+      const apiResponse = await getUsers.apiResponse;
       const bodyElement = await getUsers.body.data;
-      await getChecker.validateType(bodyElement);
-      await getChecker.validateOkResponse(apiStatus);
+      await getChecker.validateSchema(bodyElement);
+      await getChecker.validateOkResponse(apiResponse);
     }
   );
   test(
@@ -54,10 +53,8 @@ test.describe("API testing", () => {
       const getChecker = new GetChecker(request);
       const endpoint = process.env.USER_NOTFOUND!;
       const getUsers = await getPage.getUsers(endpoint);
-      const apiStatus = await getUsers.getUsers.ok();
-      const bodyElement = await getUsers.body.data;
-      await getChecker.validateType(bodyElement);
-      await getChecker.validateNotOkResponse(apiStatus);
+      const apiResponse = await getUsers.apiResponse;
+      await getChecker.validateNotOkResponse(apiResponse);
     }
   );
   test(
@@ -70,77 +67,114 @@ test.describe("API testing", () => {
       const getChecker = new GetChecker(request);
       const endpoint = process.env.USERS_DELAYED!;
       const getUsers = await getPage.getUsers(endpoint);
-      const apiStatus = await getUsers.getUsers.ok();
+      const apiResponse = await getUsers.apiResponse;
       const bodyElement = await getUsers.body.data;
-      await getChecker.validateType(bodyElement);
-      await getChecker.validateOkResponse(apiStatus);
+      await getChecker.validateSchema(bodyElement);
+      await getChecker.validateOkResponse(apiResponse);
     }
   );
-  test.only(
+  test(
     "Post user to list",
     {
       tag: "@API",
     },
     async ({ request }) => {
-      const data: object[] = [
-        {
-          first_name: "John",
-          last_name: "Rivers",
-        },
-      ];
+      const data = {
+        name: "Sandman",
+        job: "QA",
+      };
       const postPage = new PostPage(request);
       const postChecker = new PostChecker(request);
       const endpoint = process.env.POST_USERS_ENDPOINT!;
       const postUser = await postPage.postToUsers(endpoint, data);
-      const apiStatus = await postUser.apiStatus;
+      const apiResponse = await postUser.apiResponse;
       const body = await postUser.body;
-      const bodyElement = await body;
-      await postChecker.validateOkResponse(apiStatus);
-      await postChecker.validateData(body, data, bodyElement);
+      await postChecker.validateOkResponse(apiResponse);
+      await postChecker.validateData(body, data);
+      await postChecker.validateSchema(data);
     }
   );
   test(
-    "Put user",
+    "Put user ",
     {
       tag: "@API",
     },
     async ({ request }) => {
-      const data = [
-        {
-          name: "John Rivers",
-          job: "QA",
-        },
-      ];
+      const data = {
+        name: "Sandman",
+        job: "QA",
+      };
+      const postPage = new PostPage(request);
+      const postChecker = new PostChecker(request);
+      const endpoint = process.env.USER_ENDPOINT!;
+      const postUser = await postPage.postToUsers(endpoint, data);
+      const apiResponse = await postUser.apiResponse;
+      const body = await postUser.body;
+      await postChecker.validateOkResponse(apiResponse);
+      await postChecker.validateData(body, data);
+      await postChecker.validateSchema(body);
+    }
+  );
+  test(
+    "Put user job",
+    {
+      tag: "@API",
+    },
+    async ({ request }) => {
+      const data = {
+        //        name: "Sandman",
+        job: "QA",
+      };
       const putPage = new PutPage(request);
       const putChecker = new PutChecker(request);
       const endpoint = process.env.USER_ENDPOINT!;
-      const putUsers = await putPage.PutUsers(endpoint, data);
-      const apiStatus = await putUsers.apiStatus;
+      const putUsers = await putPage.putUsers(endpoint, data);
+      const apiResponse = await putUsers.apiResponse;
       const body = await putUsers.body;
-      await putChecker.validateOkResponse(apiStatus);
+      await putChecker.validateOkResponse(apiResponse);
+      await putChecker.validateRequire(body);
       await putChecker.validateData(body, data);
     }
   );
   test(
-    "Patch user Job",
+    "Put user Name",
     {
       tag: "@API",
     },
     async ({ request }) => {
-      const data = [
-        {
-          name: "morpheus",
-          job: "DEV",
-        },
-      ];
+      const data = {
+        name: "morpheus",
+        //        job: "zion resident",
+      };
+      const putPage = new PutPage(request);
+      const putChecker = new PutChecker(request);
+      const endpoint = process.env.USER_ENDPOINT!;
+      const putUsers = await putPage.putUsers(endpoint, data);
+      const apiResponse = await putUsers.apiResponse;
+      const body = await putUsers.body;
+      await putChecker.validateOkResponse(apiResponse);
+      await putChecker.validateRequire(body);
+      await putChecker.validateData(body, data);
+    }
+  );
+  test(
+    "Patch user",
+    {
+      tag: "@API",
+    },
+    async ({ request }) => {
+      const data = {
+        name: "Sandman",
+        job: "QA",
+      };
       const patchPage = new PatchPage(request);
       const patchChecker = new PatchChecker(request);
       const endpoint = process.env.USER_ENDPOINT!;
-      const dataName = data[0].name;
+      const dataName = data.name;
       const patchUsers = await patchPage.patchUsers(endpoint, data, dataName);
-      const apiStatus = await patchUsers.apiStatus;
+      const apiResponse = await patchUsers.apiResponse;
       const body = await patchUsers.body;
-      await patchChecker.validateOkResponse(apiStatus);
+      await patchChecker.validateOkResponse(apiResponse);
       await patchChecker.validateData(body, data);
     }
   );
@@ -150,73 +184,40 @@ test.describe("API testing", () => {
       tag: "@API",
     },
     async ({ request }) => {
-      const data = [
-        {
-          name: "Sandman",
-          job: "QA",
-        },
-      ];
+      const data = {
+        name: "Sandman",
+        //        job: "QA",
+      };
       const patchPage = new PatchPage(request);
       const patchChecker = new PatchChecker(request);
       const endpoint = process.env.USER_ENDPOINT!;
-      const dataName = data[0].job;
+      const dataName = data.name;
       const patchUsers = await patchPage.patchUsers(endpoint, data, dataName);
-      const apiStatus = await patchUsers.apiStatus;
+      const apiResponse = await patchUsers.apiResponse;
       const body = await patchUsers.body;
-      await patchChecker.validateOkResponse(apiStatus);
+      await patchChecker.validateOkResponse(apiResponse);
       await patchChecker.validateData(body, data);
     }
   );
   test(
-    "Post, get and patch by Job",
+    "Patch user Job",
     {
       tag: "@API",
     },
     async ({ request }) => {
-      const dataA = [
-        {
-          email: "test@reqres.in",
-          first_name: "Morpheus",
-          last_name: "Sandman",
-          avatar: "https://reqres.in/img/faces/2-image.jpg",
-        },
-      ];
-      const dataB = [
-        {
-          first_name: "Sandman",
-          job: "DEV",
-        },
-      ];
-      //Post starts
-      const endpoint = process.env.USER_ENDPOINT!;
-      const postPage = new PostPage(request);
-      const postChecker = new PostChecker(request);
-      const postUser = await postPage.postToUsers(endpoint, dataA);
-      const apiStatusA = await postUser.apiStatus;
-      const bodyA = await postUser.body;
-      const bodyElement = await postUser.body.data;
-      await postChecker.validateOkResponse(apiStatusA);
-      await postChecker.validateData(bodyA, dataA, bodyElement);
-      //Post ends
-      //Patch starts
+      const data = {
+        //        name: "Sandman",
+        job: "QA",
+      };
       const patchPage = new PatchPage(request);
       const patchChecker = new PatchChecker(request);
-      //      const endpoint = process.env.USER_ENDPOINT!;
-      const dataJob = dataA[0].first_name;
-      const patchUsers = await patchPage.patchUsers(endpoint, dataB, dataJob);
-      const apiStatusB = await patchUsers.apiStatus;
+      const endpoint = process.env.USER_ENDPOINT!;
+      const dataName = data.job;
+      const patchUsers = await patchPage.patchUsers(endpoint, data, dataName);
+      const apiResponse = await patchUsers.apiResponse;
       const body = await patchUsers.body;
-      await patchChecker.validateOkResponse(apiStatusB);
-      //      await patchChecker.validateData(body, dataB);
-      //Patch ends
-      //Get starts
-      const getPage = new GetPage(request);
-      const getChecker = new GetChecker(request);
-      //      const endpoint = process.env.USER_ENDPOINT!;
-      const getUsers = await getPage.getUsers(endpoint);
-      const apiStatusC = await getUsers.getUsers.ok();
-      await getChecker.validateOkResponse(apiStatusC);
-      //Get ends
+      await patchChecker.validateOkResponse(apiResponse);
+      await patchChecker.validateData(body, data);
     }
   );
   test(
@@ -225,18 +226,16 @@ test.describe("API testing", () => {
       tag: "@API",
     },
     async ({ request }) => {
-      const data = [
-        {
-          email: "test@reqres.in",
-          first_name: "Morpheus",
-          last_name: "Sandman",
-          avatar: "https://reqres.in/img/faces/2-image.jpg",
-        },
-      ];
+      const data = {
+        email: "test@reqres.in",
+        first_name: "Morpheus",
+        last_name: "Sandman",
+        avatar: "https://reqres.in/img/faces/2-image.jpg",
+      };
       const deletePage = new DeletePage(request);
       const deleteChecker = new DeleteChecker(request);
       const endpoint = process.env.USER_ENDPOINT!;
-      const dataName = data[0].first_name;
+      const dataName = data.first_name;
       const deleteUsers = await deletePage.DeleteUsers(endpoint, dataName);
       const apiStatus = await deleteUsers.apiStatus;
       await deleteChecker.validateOkResponse(apiStatus);

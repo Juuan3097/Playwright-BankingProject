@@ -8,11 +8,9 @@ export class PostPage {
   }
 
   async postToUsers(endpoint: string, data: object) {
-    const newUser = await this.request.post(`${endpoint}`, { data });
-    const apiStatus = await newUser.status();
-    const body = await newUser.json();
-    // console.log("Body:");
-    // console.log(body);
-    return { apiStatus, body };
+    const apiResponse = await this.request.post(`${endpoint}`, { data });
+    const body = await apiResponse.json();
+
+    return { apiResponse, body };
   }
 }

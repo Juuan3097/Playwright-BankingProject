@@ -1,5 +1,5 @@
-import { test, expect, APIRequestContext } from "@playwright/test";
-import { z } from "zod";
+import { test, expect, APIRequestContext, APIResponse } from "@playwright/test";
+import { array, z } from "zod";
 
 export class GetChecker {
   request: APIRequestContext;
@@ -8,24 +8,35 @@ export class GetChecker {
     this.request = request;
   }
 
-  async validateOkResponse(apiStatus: boolean) {
-    expect(await apiStatus).toBeTruthy();
+  async validateOkResponse(apiResponse: APIResponse) {
+    expect(await apiResponse).toBeOK();
   }
 
-  async validateNotOkResponse(apiStatus: boolean) {
-    expect(await apiStatus).toBeFalsy();
+  async validateNotOkResponse(apiResponse: APIResponse) {
+    expect(await apiResponse).not.toBeOK();
   }
 
-  async validateType(bodyElement: object) {
-    const bodyResponse = z
-      .object({
+  async validateSchema(bodyElement: object) {
+    if (Array.isArray(bodyElement)) {
+      const bodyResponse = z
+        .object({
+          id: z.number(),
+          email: z.string(),
+          first_name: z.string(),
+          last_name: z.string(),
+          avatar: z.string(),
+        })
+        .array();
+      await bodyResponse.parse(bodyElement);
+    } else {
+      const bodyResponse = z.object({
         id: z.number(),
         email: z.string(),
         first_name: z.string(),
         last_name: z.string(),
         avatar: z.string(),
-      })
-      .array();
-    expect(() => bodyResponse.parse(bodyElement)).not.toThrow();
+      });
+      await bodyResponse.parse(bodyElement);
+    }
   }
 }

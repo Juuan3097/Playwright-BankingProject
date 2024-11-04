@@ -1,14 +1,14 @@
 import { APIRequestContext } from "@playwright/test";
 
-export class GetPage {
+export class PostAPIPage {
   request: APIRequestContext;
 
   constructor(request: APIRequestContext) {
     this.request = request;
   }
 
-  async getUsers(endpoint: string) {
-    const apiResponse = await this.request.get(`${endpoint}`);
+  async postAPI(endpoint: string, data: object) {
+    const apiResponse = await this.request.post(`${endpoint}`, { data });
     const body = await apiResponse.json();
     return { apiResponse, body };
   }

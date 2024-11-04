@@ -13,7 +13,7 @@ dotenv.config();
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  testDir: "./web/tests",
+  testDir: "./api/tests",
   /* Run tests in files in parallel */
   fullyParallel: false,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -67,6 +67,19 @@ export default defineConfig({
     {
       name: "chromium",
       use: { ...devices["Desktop Chrome"] },
+    },
+    {
+      name: "simpleBookApiSetup",
+      use: { ...devices["Desktop Chrome"] },
+      testMatch: ["simpleBooksAuthentication.setup.ts"],
+    },
+    {
+      name: "simpleBookAPI",
+      use: {
+        ...devices["Desktop Chrome"],
+        storageState: "API/playwright/.auth/user.json",
+      },
+      dependencies: ["simpleBookApiSetup"],
     },
 
     // {

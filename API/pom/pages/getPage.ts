@@ -10,6 +10,7 @@ export class GetAPIPage {
   async getAPI(endpoint: string) {
     const apiResponse = await this.request.get(`${endpoint}`);
     const body = await apiResponse.json();
+    
     return { apiResponse, body };
   }
 }
